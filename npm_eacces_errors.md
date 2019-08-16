@@ -1,4 +1,6 @@
-# Resolving EACCES permissions errors when installing packages globally
+# NPM
+
+## Resolving EACCES permissions errors when installing packages globally
 
 1.  Back up your computer.
 2.  On the command line, in your home directory, create a directory for global installations:

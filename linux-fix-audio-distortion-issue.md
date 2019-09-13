@@ -1,15 +1,31 @@
 ## Stop audio distortion issue on Linux Mint 19.2 (could affect other ubuntu flavors as well)
 
-`nano /etc/pulse/default.pa`
+1. Open pulse audio configuration file.
 
-then find a line containing:
+```
+nano /etc/pulse/default.pa
+```
 
-`load-module module-udev-detect`
+2. find a line containing:
 
-modify this to become:
+```
+load-module module-udev-detect
+```
 
-`load-module module-udev-detect tsched=0`
+3. modify this to become:
 
-then run this to kill existing pulseaudio
+```
+load-module module-udev-detect tsched=0
+```
 
-`pulseaudio -k`
+4. then run this to kill existing pulseaudio
+
+```
+pulseaudio -k
+```
+
+### Why this works?
+
+This disables something called "Glitch-free audio" which doesn't seem to play nice with my sound chip (ALC1220). 
+
+Ironic given the name, since it's causing me glitches!

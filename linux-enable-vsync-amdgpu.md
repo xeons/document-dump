@@ -1,8 +1,12 @@
-Create or modify file:
+# Linux - Enable VSync for AMDGPU driver.
 
->/etc/X11/xorg.conf.d/20-amdgpu.conf
+1. Create or modify file:
 
-Add this config section.
+```
+/etc/X11/xorg.conf.d/20-amdgpu.conf
+```
+
+ 2. Add this config section.
 
 ```
  Section "Device"
